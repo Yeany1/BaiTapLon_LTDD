@@ -56,13 +56,17 @@ export default function App() {
 
       <ScrollView style={styles.scroll}>
         {Array.isArray(userData) && userData.length > 0 && (
-          <SafeAreaView style={styles.user}>
-            <Image
-              style={{ width: 110, height: 110, borderRadius: "50%" }}
-              source={{ uri: userData[0].avatar }}
-            />
-            <Text style={styles.textUser}>{userData[1].firstName + " " + userData[1].lastName}</Text>
+        
+          <SafeAreaView style={styles.thongtin}>
+            <TouchableOpacity style={styles.user}>
+                  <Image
+                    style={{ width: 110, height: 110, borderRadius: "50%" }}
+                    source={{ uri: userData[0].avatar }}
+                />
+                <Text style={styles.textUser}>{userData[1].firstName + " " + userData[1].lastName}</Text>
+            </TouchableOpacity>
           </SafeAreaView>
+          
         )}
          <SafeAreaView style={styles.buttonOption}>
           <TouchableOpacity style={styles.option}>
